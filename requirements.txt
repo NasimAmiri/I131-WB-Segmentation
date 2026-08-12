@@ -1,0 +1,12 @@
+nnunetv2==2.7.0
+numpy==2.4.4
+pandas==3.0.3
+nibabel==5.4.2
+SimpleITK==2.5.5
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.9
+Pillow==12.2.0
+tqdm==4.67.3
+openpyxl==3.1.5
+segmentationmetrics==1.2.0

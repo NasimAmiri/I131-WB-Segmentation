@@ -1,0 +1,69 @@
+{
+  "figures": {
+    "2": {
+      "kind": "composite",
+      "panels": [
+        "<stage-1-segmentation-plot.png>",
+        "<stage-2-segmentation-plot.png>",
+        "<external-segmentation-plot.png>",
+        "<artifact-segmentation-plot.png>"
+      ]
+    },
+    "3": {
+      "kind": "stage_comparison",
+      "image": "<paired-image.nii.gz>",
+      "stage_1": {
+        "ground_truth": "<stage-1-ground-truth.nii.gz>",
+        "predictions": {
+          "ANT": "<stage-1-ant-prediction.nii.gz>",
+          "POST": "<stage-1-post-prediction.nii.gz>"
+        }
+      },
+      "stage_2": {
+        "ground_truth": "<stage-2-ground-truth.nii.gz>",
+        "predictions": {
+          "ANT": "<stage-2-ant-prediction.nii.gz>",
+          "POST": "<stage-2-post-prediction.nii.gz>"
+        }
+      },
+      "flip_lr": true
+    },
+    "4": {
+      "kind": "case_comparison",
+      "image": "<paired-image.nii.gz>",
+      "ground_truth": "<paired-ground-truth.nii.gz>",
+      "predictions": {"ANT": "<ant-prediction.nii.gz>", "POST": "<post-prediction.nii.gz>"},
+      "flip_lr": true
+    },
+    "5": {
+      "kind": "case_comparison",
+      "image": "<paired-image.nii.gz>",
+      "ground_truth": "<paired-ground-truth.nii.gz>",
+      "predictions": {"ANT": "<ant-prediction.nii.gz>", "POST": "<post-prediction.nii.gz>"},
+      "flip_lr": true
+    },
+    "6": {
+      "kind": "case_comparison",
+      "image": "<paired-image.nii.gz>",
+      "ground_truth": "<paired-ground-truth.nii.gz>",
+      "predictions": {"ANT": "<ant-prediction.nii.gz>", "POST": "<post-prediction.nii.gz>"},
+      "flip_lr": true
+    },
+    "7": {
+      "kind": "case_comparison",
+      "image": "<paired-image.nii.gz>",
+      "ground_truth": "<paired-ground-truth.nii.gz>",
+      "predictions": {"ANT": "<ant-prediction.nii.gz>", "POST": "<post-prediction.nii.gz>"},
+      "flip_lr": true
+    },
+    "8": {
+      "kind": "composite",
+      "panels": [
+        "<stage-1-confusion-matrix.png>",
+        "<stage-2-confusion-matrix.png>",
+        "<external-confusion-matrix.png>",
+        "<artifact-confusion-matrix.png>"
+      ]
+    }
+  }
+}
