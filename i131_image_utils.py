@@ -37,6 +37,7 @@ COMPARISON_COLORS = {
     "overlap": (255, 230, 0),
     "gt_only": (0, 210, 0),
     "pred_only": (230, 50, 50),
+    "class_mismatch": (180, 0, 180),
 }
 
 
@@ -171,12 +172,17 @@ def overlay_mask(scan: np.ndarray, mask: np.ndarray, alpha: float = 0.55) -> np.
 def comparison_mask(ground_truth: np.ndarray, prediction: np.ndarray, shape: tuple[int, int]) -> np.ndarray:
     ground_truth = resize_nearest(ground_truth, shape)
     prediction = resize_nearest(prediction, shape)
-    reference = np.rint(ground_truth).astype(np.int16) > 0
-    predicted = np.rint(prediction).astype(np.int16) > 0
+    reference_labels = np.rint(ground_truth).astype(np.int16)
+    predicted_labels = np.rint(prediction).astype(np.int16)
+    reference = reference_labels > 0
+    predicted = predicted_labels > 0
+    exact_match = reference & predicted & (reference_labels == predicted_labels)
+    class_mismatch = reference & predicted & (reference_labels != predicted_labels)
     output = np.full((*shape, 3), 255, dtype=np.uint8)
-    output[reference & predicted] = COMPARISON_COLORS["overlap"]
+    output[exact_match] = COMPARISON_COLORS["overlap"]
     output[reference & ~predicted] = COMPARISON_COLORS["gt_only"]
     output[~reference & predicted] = COMPARISON_COLORS["pred_only"]
+    output[class_mismatch] = COMPARISON_COLORS["class_mismatch"]
     return output
 
 
