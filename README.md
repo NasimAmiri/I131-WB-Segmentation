@@ -1,6 +1,6 @@
 # Multiclass I-131 Planar Scintigraphy Segmentation with nnU-Net
 
-Publication code for the workflow described in **“Multiclass Uptake Segmentation and Image-based Classification in Planar Iodine-131 Whole-Body Scintigraphy Using nnU-Net.”** The repository covers cohort preparation, intensity normalization, paired-projection nnU-Net training and inference, segmentation evaluation, segmentation-derived patient classification, and manuscript Figures 2–8.
+Publication code for the workflow described in **“Multiclass Uptake Segmentation and Segmentation-based Classification in Planar Iodine-131 Whole-Body Scintigraphy Using nnU-Net.”** The repository covers cohort preparation, intensity normalization, paired-projection nnU-Net training and inference, segmentation evaluation, segmentation-derived patient classification, and manuscript Figures 2–8.
 
 ## Requirements
 
