@@ -184,7 +184,7 @@ python generate_paper_figures.py \
   --output-dir /path/to/private_figure_outputs
 ```
 
-Outputs are named `figure_02.png`/`figure_02.tiff` through `figure_08.png`/`figure_08.tiff` and carry 600-DPI metadata. Scans use inverse gray; masks use the label table above. Agreement overlays use yellow for overlap, green for missed ground truth, and red for false-positive prediction.
+Outputs are named `figure_02.png`/`figure_02.tiff` through `figure_08.png`/`figure_08.tiff` and carry 600-DPI metadata. Scans use inverse gray; masks use the label table above. Agreement overlays use yellow only for exact class agreement, green for missed ground truth, red for false-positive prediction, and purple when both masks are foreground but their classes differ. A purple mismatch is counted as both a false negative for the reference class and a false positive for the predicted class.
 
 ## Troubleshooting
 
