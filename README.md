@@ -196,7 +196,7 @@ Outputs are named `figure_02.png`/`figure_02.tiff` through `figure_08.png`/`figu
 
 ## Citation
 
-Please cite the associated manuscript. Replace this placeholder with the journal citation and DOI after publication:
+Please cite the associated manuscript. 
 
 > Multiclass Uptake Segmentation and Image-based Classification in Planar Iodine-131 Whole-Body Scintigraphy Using nnU-Net.
 
